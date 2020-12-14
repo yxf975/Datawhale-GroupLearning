@@ -6,7 +6,7 @@
 
 表1-A 表 Addressbook （地址簿）中的列
 
-![Z4El4zKbbWnaVHro](main/sql/image/71f46b1e1a52c6504af2f7845d78971d5b47e971.png)
+![Z4El4zKbbWnaVHro](./sql/image/71f46b1e1a52c6504af2f7845d78971d5b47e971.png)
 
 #### sql
 
