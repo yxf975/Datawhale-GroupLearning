@@ -6,7 +6,7 @@
 
 表1-A 表 Addressbook （地址簿）中的列
 
-![Z4El4zKbbWnaVHro](G:\文档\sql\image\71f46b1e1a52c6504af2f7845d78971d5b47e971.png)
+![Z4El4zKbbWnaVHro](.\image\71f46b1e1a52c6504af2f7845d78971d5b47e971.png)
 
 #### sql
 
@@ -49,7 +49,7 @@ alter table Addressbook add column postal_code char(8) not null;
 
 在日常生活中我们时常会误删文件，我们通常的解决办法就是备份，以便于恢复误删的文件。数据库也一样，在删除前我们先备份一下数据。这里介绍一下在MySQL Workbench中的数据备份与恢复，在右边菜单栏里有导出这一项，我们可以通过导出来备份我们的数据库到指定文件夹
 
-![image-20201214150518677](G:\文档\sql\image\image-20201214150407188.png)
+![image-20201214150518677](.\image\image-20201214150407188.png)
 
 然后当我们删除表后，就可以导入刚刚备份的数据来恢复。
 
@@ -57,4 +57,4 @@ alter table Addressbook add column postal_code char(8) not null;
 drop table Addressbook;
 ```
 
-![image-20201214150733503](G:\文档\sql\image\image-20201214150733503.png)
+![image-20201214150733503](.\image\image-20201214150733503.png)
