@@ -595,6 +595,8 @@ SELECT product id，SUM（product name）
 3. SELECT子句中如果出现列名，只能是GROUP BY子句中指定的列名（也就是聚合键）
 4. where应该放Group by 前面
 
+解释SQL中执行顺序是FROM->WHERE->GROUP BY -> HAVING-> SELECT->ORDER BY。因此要注意有些别名在使用时不一定是创建好的。
+
 ### 2.6
 
 请编写一条SELECT语句，求出销售单价（sale_price列）合计值是进货单价（purchase prilce列）合计值1.5倍的商品种类。执行结果如下所示。
@@ -631,3 +633,7 @@ from product
 order by regist_date is not null, regist_date desc, purchase_price;
 ```
 
+含有NULL数据排序后的位置：
+
+* 如果针对数据内容排序，ASC方式排序NULL数据会放在最前面，相反DESC数据会放在最后。
+* 但要是人为控制NULL数据的位置时，可以使用IS NULL排序会默认把NULL的值放到最后，可以在后面加上DESC或者使用IS NOT NULL来使含有NULL的数据置于最前面
