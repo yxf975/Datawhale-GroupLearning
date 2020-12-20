@@ -411,6 +411,18 @@ T恤衫         |   1000    | 2009-09-20
 菜刀          |    3000    | 2009-09-20
 ```
 
+### 解答
+
+```sql
+ CREATE VIEW ViewPractice5_1(product_name,sale_price,regist_date)
+ AS
+ SELECT product_name,sale_price,regist_date
+ FROM product
+ WHERE sale_price>=1000 AND regist_date = '2009-09-20';
+```
+
+
+
 ## 3.2
 
 向习题一中创建的视图 ViewPractice5_1 中插入如下数据，会得到什么样的结果呢？
@@ -418,6 +430,12 @@ T恤衫         |   1000    | 2009-09-20
 ```sql
 INSERT INTO ViewPractice5_1 VALUES (' 刀子 ', 300, '2009-11-02');
 ```
+
+### 解答
+
+报错：
+
+Error Code: 1423. Field of view 'shop.viewpractice5_1' underlying table doesn't have a default value
 
 ## 3.3
 
@@ -435,6 +453,16 @@ product_id | product_name | product_type | sale_price | sale_price_all
 0007       | 擦菜板        | 厨房用具       | 880       | 2097.5000000000000000
 0008       | 圆珠笔        | 办公用品       | 100       | 2097.5000000000000000
 ```
+
+### 解答
+
+```sql
+ SELECT product_id,product_name, product_type, sale_price,
+ (SELECT AVG(sale_price) FROM product) AS sale_price_all
+ FROM product;
+```
+
+
 
 ## 3.4
 
@@ -455,7 +483,18 @@ product_id | product_name | product_type | sale_price | avg_sale_price
 
 提示：其中的关键是 avg_sale_price 列。与习题三不同，这里需要计算出的 是各商品种类的平均销售单价。这与使用关联子查询所得到的结果相同。 也就是说，该列可以使用关联子查询进行创建。问题就是应该在什么地方使用这个关联子查询。
 
-# 
+### 解答
+
+```sql
+ SELECT product_id,product_name, product_type, sale_price,
+ (SELECT AVG(sale_price)
+ FROM product AS p2
+ WHERE p1.product_type = p2.product_type
+ GROUP BY product_type) AS avg_sale_price
+ FROM product AS p1;
+```
+
+
 
 # 3.3 各种各样的函数
 
