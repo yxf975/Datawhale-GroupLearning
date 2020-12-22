@@ -20,7 +20,7 @@ SELECT stu_name FROM view_students_info;
 
 
 
-[![YnTlq5vR65wRlPdk](E:\git_project\Datawhale-GroupLearning\sql\image\43b68fb04b76905b2554b3d7bfce78dc795348fb_2_690x382.png)
+[![YnTlq5vR65wRlPdk](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/43b68fb04b76905b2554b3d7bfce78dc795348fb_2_690x382.png)
 
 
 
@@ -54,7 +54,7 @@ CREATE VIEW <视图名称>(<列名1>,<列名2>,...) AS <SELECT语句>
 
 
 
-[![lpBdy6SjY7FwbpsC](E:\git_project\Datawhale-GroupLearning\sql\image\87f3e18e1b9a9edeb20cfa02a01d118b905763a3_2_599x500.png)
+[![lpBdy6SjY7FwbpsC](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/87f3e18e1b9a9edeb20cfa02a01d118b905763a3_2_599x500.png)
 
 
 
@@ -93,7 +93,7 @@ SELECT product_type, COUNT(*)
 
 创建的视图如下图所示：
 
-![RmwfAMC3H2FlJazf](http://datawhale.club/uploads/default/original/1X/b893df90215309456dc47af2da19accda2f68ed6.png)
+![RmwfAMC3H2FlJazf](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/b893df90215309456dc47af2da19accda2f68ed6.png)
 
 - 基于多表的视图
 
@@ -135,7 +135,7 @@ SELECT product_type, sale_price, shop_name
 
 创建的视图如下图所示
 
-![7fifOiOMfOgfqrOp](E:\git_project\Datawhale-GroupLearning\sql\image\31e2e7e533e8e5d8a10a0aee34f93d9b9d918916.png)
+![7fifOiOMfOgfqrOp](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/31e2e7e533e8e5d8a10a0aee34f93d9b9d918916.png)
 
 我们可以在这个视图的基础上进行查询
 
@@ -147,7 +147,7 @@ SELECT sale_price, shop_name
 
 查询结果为：
 
-![Y0Jf0hzxQOXCQsUp](E:\git_project\Datawhale-GroupLearning\sql\image\aba3b1da871ee65cc75d101152a96354a1f030e6.png)
+![Y0Jf0hzxQOXCQsUp](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/aba3b1da871ee65cc75d101152a96354a1f030e6.png)
 
 ## 3.1.5 如何修改视图结构
 
@@ -174,7 +174,7 @@ ALTER VIEW productSum
 
 此时productSum视图内容如下图所示
 
-![U7c1MZRuoUuHyFcj](E:\git_project\Datawhale-GroupLearning\sql\image\133477c379e38c8dc98cbc67d922d413d0246b67.png)
+![U7c1MZRuoUuHyFcj](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/133477c379e38c8dc98cbc67d922d413d0246b67.png)
 
 ## 3.1.6 如何更新视图内容
 
@@ -203,13 +203,13 @@ UPDATE productsum
 
 此时我们再查看productSum视图，可以发现数据已经更新了
 
-![9fCOadE9zuEZS9WI](E:\git_project\Datawhale-GroupLearning\sql\image\c01ad9eed89c137b99897cbd4ac9f157d36fd28d.png)
+![9fCOadE9zuEZS9WI](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/c01ad9eed89c137b99897cbd4ac9f157d36fd28d.png)
 
 此时观察原表也可以发现数据也被更新了
 
 
 
-[![5wmjMqRztHrCGiKe](E:\git_project\Datawhale-GroupLearning\sql\image\59f1f89b0593839292197135ce2e6c00950224d5_2_690x136.png)
+![5wmjMqRztHrCGiKe](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/59f1f89b0593839292197135ce2e6c00950224d5_2_690x136.png)
 
 不知道大家看到这个结果会不会有疑问，刚才修改视图的时候是设置product_type='办公用品’的商品的sale_price=5000，为什么原表的数据只有一条做了修改呢？
 
@@ -346,7 +346,7 @@ SELECT product_type, product_name, sale_price
 
 你能理解这个例子在做什么操作么？先来看一下这个例子的执行结果
 
-![sRdkXBxMgxT8mQYj](E:\git_project\Datawhale-GroupLearning\sql\image\8d39bfcc1908251a1f1b1fcbecee6828e8a823a7.png)
+![sRdkXBxMgxT8mQYj](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/8d39bfcc1908251a1f1b1fcbecee6828e8a823a7.png)
 
 通过上面的例子我们大概可以猜到吗，关联子查询就是通过一些标志将内外两层的查询连接起来起到过滤数据的目的，接下来我们就一起看一下关联子查询的具体内容吧。
 
@@ -1547,6 +1547,8 @@ SELECT name,
 
 运算或者函数中含有 NULL 时，结果全都会变为NULL ？（判断题）
 
+错
+
 ## 3.6
 
 对本章中使用的 product（商品）表执行如下 2 条 SELECT 语句，能够得到什么样的结果呢？
@@ -1558,6 +1560,10 @@ SELECT product_name, purchase_price
   FROM product
  WHERE purchase_price NOT IN (500, 2800, 5000);
 ```
+
+输出结果：
+
+
 
 ②
 
