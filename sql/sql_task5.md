@@ -35,7 +35,7 @@ SELECT product_name
 
 
 
-![ch0501](E:\git_project\Datawhale-GroupLearning\sql\image\cdd92aff39de15d0ab7fff9cbdd7fe86bfd2d85e_2_690x273.png)
+![ch0501](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/cdd92aff39de15d0ab7fff9cbdd7fe86bfd2d85e_2_690x273.png)
 
 
 
@@ -93,7 +93,7 @@ SELECT  product_name
   FROM product  
 ```
 
-![ch0503](E:\git_project\Datawhale-GroupLearning\sql\image\807a4a60172e617d24e39a62b59de7a7693f6950.png)
+![ch0503](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/807a4a60172e617d24e39a62b59de7a7693f6950.png)
 
 ## 5.2.2 聚合函数在窗口函数上的使用
 
@@ -112,13 +112,13 @@ SELECT  product_id
 
 
 
-![wpH8v3sNIdtgdHGD](E:\git_project\Datawhale-GroupLearning\sql\image\c857f00b1a380dadef9e44a95f17ea9c5eab1d77_2_690x269.png)
+![wpH8v3sNIdtgdHGD](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/c857f00b1a380dadef9e44a95f17ea9c5eab1d77_2_690x269.png)
 
 
 
 
 
-![dWSYUjbCNhTZrFhy](E:\git_project\Datawhale-GroupLearning\sql\image\d7ba5cb4b9522d1b2c0062dd8b4d3e17c6b2c96e_2_690x272.png)
+![dWSYUjbCNhTZrFhy](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/d7ba5cb4b9522d1b2c0062dd8b4d3e17c6b2c96e_2_690x272.png)
 
 
 
@@ -126,7 +126,7 @@ SELECT  product_id
 
 # 5.3 窗口函数的的应用 - 计算移动平均
 
-在上面提到，聚合函数在窗口函数使用时，计算的是累积到当前行的所有的数据的聚合。 实际上，还可以指定更加详细的**汇总范围**。该汇总范围成为**框架(\**\*\*frame\*\**\*)。**
+在上面提到，聚合函数在窗口函数使用时，计算的是累积到当前行的所有的数据的聚合。 实际上，还可以指定更加详细的**汇总范围**。该汇总范围成为**框架(frame)。**
 
 语法
 
@@ -166,7 +166,7 @@ ROWS 2 PRECEDING：
 
 
 
-![eGGd2Je3pieslAVk](E:\git_project\Datawhale-GroupLearning\sql\image\e9b7c8a740b9de6a49dbb53c058e521e108af125_2_690x247.png)
+![eGGd2Je3pieslAVk](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/e9b7c8a740b9de6a49dbb53c058e521e108af125_2_690x247.png)
 
 
 
@@ -174,7 +174,7 @@ ROWS BETWEEN 1 PRECEDING AND 1 FOLLOWING：
 
 
 
-![K1bOj3XhGTQe4tBx](E:\git_project\Datawhale-GroupLearning\sql\image\c49518669b1f29f2771fa61c32954c9d53e64beb_2_690x242.png)
+![K1bOj3XhGTQe4tBx](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/c49518669b1f29f2771fa61c32954c9d53e64beb_2_690x242.png)
 
 ## 5.3.1 窗口函数适用范围和注意事项
 
@@ -197,17 +197,17 @@ SELECT  product_type
 
 得到的结果为：
 
-![WNKuoQVZwiB56i19](E:\git_project\Datawhale-GroupLearning\sql\image\c897a5b33abff6f803a06d229bc1bd865e31ed7b.png)
+![WNKuoQVZwiB56i19](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/c897a5b33abff6f803a06d229bc1bd865e31ed7b.png)
 
 
 
-![HyLUTYmJ791AkSWE](E:\git_project\Datawhale-GroupLearning\sql\image\c2829d83b00ed538ac51fc6310c2e58756cd2c34_2_690x304.png)
+![HyLUTYmJ791AkSWE](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/c2829d83b00ed538ac51fc6310c2e58756cd2c34_2_690x304.png)
 
 这里ROLLUP 对product_type, regist_date两列进行合计汇总。结果实际上有三层聚合，如下图 模块3是常规的 GROUP BY 的结果，需要注意的是衣服 有个注册日期为空的，这是本来数据就存在日期为空的，不是对衣服类别的合计； 模块2和1是 ROLLUP 带来的合计，模块2是对产品种类的合计，模块1是对全部数据的总计。
 
 ROLLUP 可以对多列进行汇总求小计和合计。
 
-![zADcY2IhxvmPlykS](E:\git_project\Datawhale-GroupLearning\sql\image\e1d5fef99b2c2f89268a7d1bda835211dadcdb4a.png)
+![zADcY2IhxvmPlykS](https://github.com/yxf975/Datawhale-GroupLearning/blob/main/sql/image/e1d5fef99b2c2f89268a7d1bda835211dadcdb4a.png)
 
 # 练习题
 
@@ -223,9 +223,24 @@ SELECT  product_id
   FROM product
 ```
 
+结果：最后一列Current_max_price的值是取当前行以及前面行中sale_price的最大值
+
 ## **5.2**
 
 继续使用product表，计算出按照登记日期（regist_date）升序进行排列的各日期的销售单价（sale_price）的总额。排序是需要将登记日期为NULL 的“运动 T 恤”记录排在第 1 位（也就是将其看作比其他日期都早）
+
+```sql
+SELECT 	product_id, 
+		product_name,
+		sale_price,
+        regist_date,
+		SUM(sale_price) OVER (
+			PARTITION BY regist_date
+			ORDER BY regist_date) AS sum_daily_sale
+FROM product;
+```
+
+
 
 ## **5.3**
 
@@ -234,3 +249,9 @@ SELECT  product_id
 ① 窗口函数不指定PARTITION BY的效果是什么？
 
 ② 为什么说窗口函数只能在SELECT子句中使用？实际上，在ORDER BY 子句使用系统并不会报错。
+
+解答：
+
+①显示出来的结果相同类别（指定的）数据并不会放一块
+
+②
