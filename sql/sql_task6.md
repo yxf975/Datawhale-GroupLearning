@@ -15,6 +15,20 @@
 +----+-------+--------+--------------+
 ```
 
+```sql
+CREATE TABLE employee
+(Id VARCHAR(4) NOT NULL,
+ Name VARCHAR(32) NOT NULL,
+ Salary INTEGER,
+ Department_id VARCHAR(4) NOT NULL,
+ PRIMARY KEY (Id));
+ 
+INSERT INTO employee VALUES('1', 'Joe', 70000, '1'),
+('2', 'Henry', 80000, '2'),
+('3', 'Sam', 60000, '2'),
+('4', 'Max', 90000, '1');
+```
+
 创建Department 表，包含公司所有部门的信息。
 
 ```nohighlight
@@ -24,6 +38,15 @@
 | 1  | IT       |
 | 2  | Sales    |
 +----+----------+
+```
+
+```sql
+CREATE TABLE department
+(Id VARCHAR(4) NOT NULL,
+ Name VARCHAR(32) NOT NULL,
+ PRIMARY KEY (Id));
+ 
+ INSERT INTO  department VALUES('1','IT'),('2','Sales');
 ```
 
 编写一个 SQL 查询，找出每个部门工资最高的员工。例如，根据上述给定的表格，Max 在 IT 部门有最高工资，Henry 在 Sales 部门有最高工资。
